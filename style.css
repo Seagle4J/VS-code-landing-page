@@ -1,0 +1,79 @@
+/* Default: Dark mode (your existing look) */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  background-color: #0d1117;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.toggle-btn .sun {
+  display: none;
+}
+.toggle-btn .moon {
+  display: inline;
+}
+
+/* Light Mode */
+#theme-toggle:checked ~ .toggle-btn .sun {
+  display: inline;
+}
+#theme-toggle:checked ~ .toggle-btn .moon {
+  display: none;
+}
+
+#theme-toggle:checked ~ .wrapper {
+  background-color: white;
+  color: black;
+}
+
+
+.toplink{
+color: #9ba3b4;
+cursor: pointer;
+padding-left: 8px;
+padding-right: 8px;
+}
+.search {
+  background-color: inherit;  /* inherit from body */
+  color: inherit;             /* matches body text color */
+  border: 1px solid #30363d;  /* or use inherit here too if needed */
+  padding: 8px 12px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search::placeholder {
+  color: #8b949e; /* optional: lighter placeholder */
+}
+
+.image{
+  vertical-align: middle;
+}
+.button{
+  background-color: #0072be;
+  color: white;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  display: inline;
+  margin: 0;
+}
+
